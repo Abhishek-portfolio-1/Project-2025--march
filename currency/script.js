@@ -1,23 +1,28 @@
 const a=document.querySelector('#input1');
-const b=document.querySelector('#currency');
+const b=document.querySelector('#input2');
 const result=document.querySelector('#result');
 const but=document.querySelector('#button');
 
 function res(){
-     const avalue= Number(a.value);
-     const bvalue = b.value;
+     let avalue= Number(a.value);
+     let bvalue = b.value;
+     
+ 
 
-     if(bvalue == USA){
+     if(bvalue == "USA"){
 const U = avalue * 86;
+
 result.innerHTML = U;
-     }else if(bvalue == UAE){
+     }
+      if(bvalue == "UAE"){
         const D= avalue * 23.28;
          result.innerHTML=D;
-     }else if(bvalue == PR){
+     };
+      if(bvalue === "PR"){
         const P=avalue *0.31;
         result.innerHTML=P;
-     }
-     else if(bvalue == EURO){
+     };
+      if(bvalue === "EURO"){
         const E=avalue * 92.60;
         result.innerHTML=E;
      }
@@ -25,6 +30,8 @@ result.innerHTML = U;
 
 }
 but.addEventListener('click',res);
+
+
 
 
 
